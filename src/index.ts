@@ -1,7 +1,6 @@
-
-import 'reflect-metadata';
 import App from './app';
 import * as bodyParser from 'body-parser';
+import PostsController from './posts/controller';
 
 
 
@@ -14,7 +13,7 @@ import * as bodyParser from 'body-parser';
     // }
     const app = new App(
         [
-            //controllers
+            new PostsController(),
         ],
         [
             bodyParser.json(),
